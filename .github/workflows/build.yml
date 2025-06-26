@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: '3.9'
       - name: Install PlatformIO Core
-        run: pip install "platformio==4.3.4"
+        run: pip install "platformio==4.3.4,marshmallow<4"
 
       - name: Build PlatformIO Project
         run: cd "firmware/V1.1/Marlin-2.0.6.1_for_ender3_TMC2209" && pio run
