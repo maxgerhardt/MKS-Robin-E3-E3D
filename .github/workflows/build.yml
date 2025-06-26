@@ -25,10 +25,10 @@ jobs:
           pio platform install --skip-default-package  "https://github.com/platformio/platform-ststm32/archive/refs/tags/v6.1.1.zip"
           wget -O "gcc.tar.gz" "https://dl.registry.platformio.org/download/platformio/tool/toolchain-gccarmnoneeabi/1.70201.0/toolchain-gccarmnoneeabi-linux_x86_64-1.70201.0.tar.gz"
           mkdir -p ~/.platformio/packages/toolchain-gccarmnoneeabi
-          tar -xvf gcc.tar.gz -C ~/.platformio/packages/toolchain-gccarmnoneeabi
-          wget -O "mapple.tar.gz" "https://dl.registry.platformio.org/download/platformio/tool/framework-arduinoststm32-maple/3.10000.201129/framework-arduinoststm32-maple-3.10000.201129.tar.gz"
+          tar -xf gcc.tar.gz -C ~/.platformio/packages/toolchain-gccarmnoneeabi
+          wget -O "mapple.tar.gz" "https://dl.registry.platformio.org/download/platformio/tool/framework-arduinoststm32-maple/2.10000.200103/framework-arduinoststm32-maple-2.10000.200103.tar.gz"
           mkdir -p ~/.platformio/packages/framework-arduinoststm32-maple
-          tar -xvf mapple.tar.gz -C ~/.platformio/packages/framework-arduinoststm32-maple
+          tar -xf mapple.tar.gz -C ~/.platformio/packages/framework-arduinoststm32-maple
 
 
       - name: Build PlatformIO Project
