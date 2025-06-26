@@ -29,7 +29,9 @@ jobs:
           wget -O "mapple.tar.gz" "https://dl.registry.platformio.org/download/platformio/tool/framework-arduinoststm32-maple/2.10000.200103/framework-arduinoststm32-maple-2.10000.200103.tar.gz"
           mkdir -p ~/.platformio/packages/framework-arduinoststm32-maple
           tar -xf mapple.tar.gz -C ~/.platformio/packages/framework-arduinoststm32-maple
-
+          wget -O "tool-stm32duino.tar.gz" "https://dl.registry.platformio.org/download/platformio/tool/tool-stm32duino/1.0.1/tool-stm32duino-linux_x86_64-1.0.1.tar.gz"
+          mkdir -p ~/.platformio/packages/tool-stm32duino
+          tar -xf tool-stm32duino.tar.gz -C ~/.platformio/packages/tool-stm32duino
 
       - name: Build PlatformIO Project
         run: cd "firmware/V1.1/Marlin-2.0.6.1_for_ender3_TMC2209" && pio run
