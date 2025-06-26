@@ -21,7 +21,10 @@ jobs:
         run: pip install "platformio==4.3.4" "marshmallow<4.0.0"
 
       - name: Install PlatformIO packages
-        run: pio platform install --skip-default-package  "https://github.com/platformio/platform-ststm32/archive/refs/tags/v6.1.1.zip" && pio lib install "https://dl.registry.platformio.org/download/platformio/tool/toolchain-gccarmnoneeabi/1.70201.0/toolchain-gccarmnoneeabi-linux_x86_64-1.70201.0.tar.gz"
+        run: |
+          pio platform install --skip-default-package  "https://github.com/platformio/platform-ststm32/archive/refs/tags/v6.1.1.zip"
+          wget -O "gcc.tar.gz" "https://dl.registry.platformio.org/download/platformio/tool/toolchain-gccarmnoneeabi/1.70201.0/toolchain-gccarmnoneeabi-linux_x86_64-1.70201.0.tar.gz"
+          tar -xvf gcc.tar.gz-C ~/.platformio/packages/toolchaingccarmnoneeabi
 
       - name: Build PlatformIO Project
         run: cd "firmware/V1.1/Marlin-2.0.6.1_for_ender3_TMC2209" && pio run
