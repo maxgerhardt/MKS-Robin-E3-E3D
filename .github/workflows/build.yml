@@ -42,4 +42,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: Firmware
-          path: .pio/build/mks_robin_e3
+          path: firmware/V1.1/Marlin-2.0.6.1_for_ender3_TMC2209/.pio/build/mks_robin_e3
