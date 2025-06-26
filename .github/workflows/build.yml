@@ -32,6 +32,9 @@ jobs:
           wget -O "tool-stm32duino.tar.gz" "https://dl.registry.platformio.org/download/platformio/tool/tool-stm32duino/1.0.1/tool-stm32duino-linux_x86_64-1.0.1.tar.gz"
           mkdir -p ~/.platformio/packages/tool-stm32duino
           tar -xf tool-stm32duino.tar.gz -C ~/.platformio/packages/tool-stm32duino
-
+          wget -O "scons.tar.gz" "https://raw.githubusercontent.com/maxgerhardt/pio-old-archive-test/refs/heads/main/tool-scons-3.30102.0.tar.gz"
+          mkdir -p ~/.platformio/packages/tool-scons
+          tar -xf scons.tar.gz -C ~/.platformio/packages/tool-scons
+        
       - name: Build PlatformIO Project
         run: cd "firmware/V1.1/Marlin-2.0.6.1_for_ender3_TMC2209" && pio run
