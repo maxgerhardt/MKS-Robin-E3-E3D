@@ -21,7 +21,7 @@ jobs:
         run: pip install "platformio==4.3.4" "marshmallow<4.0.0"
 
       - name: Install PlatformIO packages
-        run: pio platform install "https://github.com/platformio/platform-ststm32/archive/refs/tags/v6.1.1.zip"
+        run: pio platform install --skip-default-package  "https://github.com/platformio/platform-ststm32/archive/refs/tags/v6.1.1.zip"
 
       - name: Build PlatformIO Project
         run: cd "firmware/V1.1/Marlin-2.0.6.1_for_ender3_TMC2209" && pio run
