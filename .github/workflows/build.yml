@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: '3.9'
       - name: Install PlatformIO Core
-        run: pip install "platformio==4.3.4" "marshmallow<4.0.0"
+        run: pip install "platformio==5.2.5"
 
       - name: Install PlatformIO packages
         run: pio platform install --skip-default-package  "https://github.com/platformio/platform-ststm32/archive/refs/tags/v6.1.1.zip"
